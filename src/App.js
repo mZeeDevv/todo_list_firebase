@@ -1,28 +1,30 @@
 import React from "react";
 import './index.css';
-import {db} from "./firebase"
-import {GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth'
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import SignIn from "./pages/SignIn"
+import Main from "./pages/Main";
+import Header from './components/Header'
+import PrivateRoute from "./hook/PrivateRoute";
+import Spinner from "./pages/Spinner";
 function App() {
-  async function Google()
-  {
-  try {
-    const auth = getAuth()
-    const provider = new GoogleAuthProvider()
-    const result = await signInWithPopup(auth, provider)
-    const user = result.user
-    console.log(user)
-  } catch (error) {
-    console.log(error)
-  }
-  }
-  return (
-    <>
-    <button
-    onClick={Google}
-    >GetAuth</button>
+  
 
-    </>
+  return (
+  <>
+     <Router>
+  <Header/>
+   <Routes>
+  <Route path="/" element={<SignIn/>}></Route>
+  <Route path="/profile" element={<PrivateRoute/>}>
+  <Route path="/profile" element={<Main/>}/>
+  </Route>
+ 
+
+  <Route path="/son" element={<Spinner/>}></Route>
+
+  </Routes>
+  </Router>
+  </>
   );
 }
 
