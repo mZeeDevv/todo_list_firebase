@@ -14,7 +14,7 @@ export default function Header() {
         My Todo List</h1>
       <div className='flex'>
         <AiOutlineUser
-        className='text-2xl text-green-500 font-semibold'
+        className='text-2xl text-blue-600 font-bold'
         />
        {nave.pathname == "/profile" && (
         <p></p>
