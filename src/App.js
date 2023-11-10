@@ -6,6 +6,7 @@ import Main from "./pages/Main";
 import Header from './components/Header'
 import PrivateRoute from "./hook/PrivateRoute";
 import Spinner from "./pages/Spinner";
+import { ToastContainer } from "react-toastify";
 function App() {
   
 
@@ -18,12 +19,10 @@ function App() {
   <Route path="/profile" element={<PrivateRoute/>}>
   <Route path="/profile" element={<Main/>}/>
   </Route>
- 
-
   <Route path="/son" element={<Spinner/>}></Route>
-
   </Routes>
   </Router>
+
   </>
   );
 }
