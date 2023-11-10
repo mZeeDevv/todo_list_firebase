@@ -18,9 +18,9 @@ export default function Header() {
         <AiOutlineUser
         className='text-2xl text-blue-600 font-bold'
         />
-       {nave.pathname == "/profile" && (
-        <p>{name}</p>
-       )}
+       {/* {nave.pathname == "/profile" && (
+        // <p>{name}</p>
+       )} */}
       </div>
     </div>
     
