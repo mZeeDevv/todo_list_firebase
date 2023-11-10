@@ -15,7 +15,7 @@ function App() {
      <Router>
   <Header/>
    <Routes>
-  <Route path="/" element={<SignIn/>}></Route>
+  <Route path="/todo_list_firebase" element={<SignIn/>}></Route>
   <Route path="/profile" element={<PrivateRoute/>}>
   <Route path="/profile" element={<Main/>}/>
   </Route>

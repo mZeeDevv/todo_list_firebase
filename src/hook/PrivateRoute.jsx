@@ -8,6 +8,6 @@ export default function PrivateRoute() {
  if(checkingStatus) {
     return <Spinner/>
  }
- return loggin ? <Outlet/> : <Navigate to="/"/>
+ return loggin ? <Outlet/> : <Navigate to="/todo_list_firebase"/>
 }
 
